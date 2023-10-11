@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "main": "node main.js"
-  }
+  },
     "dependencies":{
         "request":"^2.88.2",
         "request-promise":"^4.2.5",
