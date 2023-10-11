@@ -1,14 +1,21 @@
 {
-  "type": "module",
-  "scripts": {
-    "main": "node main.js"
+  "name":"SYR",
+  "version":"1.0.0",
+  "description":"{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}",
+  "main":"main.js",
+  "scripts":{
+    "test":"echo \"Error:no test specified\" && exit 1"
   },
-    "dependencies":{
-        "request":"^2.88.2",
-        "request-promise":"^4.2.5",
-        "crypto-js":"^4.0.0",
-        "got":"^11.5.1",
-        "http-server":"^0.12.3",
-        "node-schedule":"^1.3.2",
-        "axios":"0.20.0"
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/ibitter/syr.git"
+  },
+  "keywords":[
+    "锁艺人在线签到"
+  ],
+  "author":"ibitter",
+  "license":"ISC",
+  "dependencies":{
+    "axios":"0.20.0"
+    }
 }
