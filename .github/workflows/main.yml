@@ -1,0 +1,31 @@
+name: 锁艺人签到
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "4 10,22 * * *"
+    watch:
+        types: [started]
+    repository_dispatch:
+        types: syr
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 15.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 15.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: "运行 锁艺人签到脚本"
+              run: |
+                  node main.js
+              env:
+                  SYRID: ${{ secrets.SYRID }}
+                  SYRPWD: ${{ secrets.SYRPWD }}
+                  NOTIFY: ${{ secrets.NOTIFY }}
