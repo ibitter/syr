@@ -3,11 +3,7 @@ name: 锁艺人签到
 on:
     workflow_dispatch:
     schedule:
-        - cron: "4 10,22 * * *"
-    watch:
-        types: [started]
-    repository_dispatch:
-        types: syr
+        - cron: 4 10,22 * * *
 
 jobs:
     build:
